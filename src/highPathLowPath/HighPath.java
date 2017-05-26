@@ -12,10 +12,12 @@ class HighPath {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		File f = new File("test.jpg");
+
+	}
+	void negativePositive(File in, File out) {
 		BufferedImage read = null;
 		try {
-			read = ImageIO.read(f);
+			read = ImageIO.read(in);
 		} catch (IOException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
@@ -35,14 +37,14 @@ class HighPath {
 			}
 		}
 
-		File f2 = new File("ret.jpg");
 		try {
-			ImageIO.write(write, "jpg", f2);
+			ImageIO.write(write, "jpg", out);
 		} catch (IOException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
 	}
+
 
 
 
