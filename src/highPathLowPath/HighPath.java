@@ -12,9 +12,11 @@ class HighPath {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-
+		File in = new File("test.jpg");
+		File out = new File("ret.jpg");
+		negativePositive(in,out);
 	}
-	void negativePositive(File in, File out) {
+	static void negativePositive(File in, File out) {
 		BufferedImage read = null;
 		try {
 			read = ImageIO.read(in);
