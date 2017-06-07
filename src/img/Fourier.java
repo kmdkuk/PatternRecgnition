@@ -1,19 +1,11 @@
 package img;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
-import javax.imageio.ImageIO;
-
 public class Fourier {
-	void dft(File in, File out, boolean inv) {
-		BufferedImage read = null;
-		
-		int wid = read.getWidth();
-		int hgt = read.getHeight();
-		
-		double real[][] = new double
+	void dft(double real[][], boolean inv) {		
+		int wid = real.length;
+		int hgt = real[0].length;
+		double image[][] = new double[wid][hgt];
+
 		// このルーチンは順変換（画像→フーリエ）、逆変換両方に使い回せる
 		// realには実数（順変換では元画像の値）、imageには虚数（はじめは0）が入っている
 		// invは順変換ではfalse、逆変換ではtrue
