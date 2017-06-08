@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * @author kouki
- *
- */
-package img;
